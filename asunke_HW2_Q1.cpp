@@ -10,3 +10,15 @@
    and track their balance. The system dynamically expands the checkbook size
    as needed.
 *************************************************************************/
+
+#include <iostream>
+#include <string>
+#include <cstdlib>
+
+using namespace std;
+
+//check structure
+struct Check {
+    int CheckNum;
+    string CheckMemo;
+    float CheckAmount;
