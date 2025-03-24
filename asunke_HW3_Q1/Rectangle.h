@@ -5,8 +5,15 @@
 #ifndef ASUNKE_HW3_Q1_RECTANGLE_H
 #define ASUNKE_HW3_Q1_RECTANGLE_H
 
+#include "Polygon.h"
+#include <iostream>
 
-class Rectangle {
+class Rectangle : public Polygon {
+public:
+    Rectangle();
+    Rectangle(int w, int h);
+    int getArea() override;
+    void draw() override;
 
 };
 
