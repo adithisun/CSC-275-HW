@@ -10,13 +10,19 @@ class Polygon {
 public:
     Polygon();
     Polygon(int newWidth, int newHeight);
+
     void setWidth(int newWidth);
     void setHeight(int newHeight);
+
+    //pure virtual function for area
+    virtual int getArea() = 0;
+
+    //pure virtual function for draw
+    virtual void draw() = 0;
 
 protected:
     int width = 0;
     int height = 0;
-
 };
 
 
