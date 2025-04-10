@@ -24,11 +24,14 @@ private:
     bool isPrivate;
 
 public:
+    //default constructor
     SocialMediaAccount() : followerCount(0), followedCount(0), isPrivate(true) {}
 
+    //parametrized constructor
     SocialMediaAccount(T handler, bool isPrivate = true)
             : handler(handler), isPrivate(isPrivate), followerCount(0), followedCount(0) {}
 
+    //setters and getters
     void setHandler(T h) { handler = h; }
     T getHandler() const { return handler; }
 
@@ -38,18 +41,21 @@ public:
     int getFollowerCount() const { return followerCount; }
     int getFollowedCount() const { return followedCount; }
 
+    //add follower
     void addFollower(T user) {
         if (followerCount < maxFollowers) {
             followers[followerCount++] = user;
         }
     }
 
+    //add followed account
     void addFollowed(T user) {
         if (followedCount < maxFollowed) {
             followed[followedCount++] = user;
         }
     }
 
+    //display followers
     void displayFollowers() const {
         if (!isPrivate) {
             cout << "Followers:\n";
@@ -61,6 +67,7 @@ public:
         }
     }
 
+    //display followed accounts
     void displayFollowed() const {
         if (!isPrivate) {
             cout << "Followed Accounts:\n";
