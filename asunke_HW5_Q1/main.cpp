@@ -10,6 +10,11 @@ templated linked list.
 *************************************************************************/
 
 #include <iostream>
+#include <fstream>
+#include <sstream>
+#include "mylist.h"
+using namespace std;
+
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
