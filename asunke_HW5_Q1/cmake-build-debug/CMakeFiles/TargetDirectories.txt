@@ -1,0 +1,3 @@
+/Users/adithisunke/Desktop/csc 275/asunke_HW5_Q1/cmake-build-debug/CMakeFiles/asunke_HW5_Q1.dir
+/Users/adithisunke/Desktop/csc 275/asunke_HW5_Q1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/adithisunke/Desktop/csc 275/asunke_HW5_Q1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
