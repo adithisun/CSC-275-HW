@@ -9,7 +9,7 @@
 using namespace std;
 
 template <typename T>
-class MyList;  
+class MyList;
 
 template <typename T>
 class Node {
@@ -18,23 +18,26 @@ class Node {
 
     Node(T val) : data(val), next(nullptr) {}
 
-    friend class MyList<T>;  
+    friend class MyList<T>;  //sllow mylist access to node's private members
 };
 
+//mylist class with a template
 template <typename T>
 class MyList {
 private:
-    Node<T>* head;  
+    Node<T>* head;  //only data member required
 
 public:
     MyList() : head(nullptr) {}
 
+    //inserthead function
     void insertHead(T theData) {
         Node<T>* newNode = new Node<T>(theData);
         newNode->next = head;
         head = newNode;
     }
 
+    //deletehead function
     T deleteHead() {
         if (!head) throw runtime_error("List is empty");
         Node<T>* temp = head;
@@ -44,11 +47,12 @@ public:
         return val;
     }
 
+    //search function
     bool search(T& target) {
         Node<T>* current = head;
         while (current) {
             if (current->data == target) {
-                target = current->data;  
+                target = current->data;
                 return true;
             }
             current = current->next;
@@ -56,6 +60,7 @@ public:
         return false;
     }
 
+    //display function
     void display() {
         Node<T>* current = head;
         while (current) {
@@ -65,7 +70,7 @@ public:
     }
 
     ~MyList() {
-        while (head) deleteHead();  
+        while (head) deleteHead();
     }
 };
 
